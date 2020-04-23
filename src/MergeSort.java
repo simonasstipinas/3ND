@@ -10,10 +10,10 @@ public class MergeSort {
 
     public static void main(String[] args) throws Throwable {
         String length = args.length != 0 ? args[0] : null;
-        int LENGTH = length == null ? 10000000 : Integer.parseInt(length);
+        int LENGTH = length == null ? 1000 : Integer.parseInt(length);
         System.out.println(LENGTH);
         int SHOW_LENGTH = 10;
-        int RUNS = 33;
+        int RUNS = 10;
         Scanner scan = new Scanner(System.in);
         System.out.println("Show or execute 1/0? ");
         int num = scan.nextInt();
@@ -49,6 +49,7 @@ public class MergeSort {
                 System.out.println("|LENGTH: " + LENGTH +
                         "| CORES: " + i +
                         "| TIME: " + difference + "|");
+                LENGTH = LENGTH * 10;
             }
         }
     }
