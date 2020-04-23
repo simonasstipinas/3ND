@@ -13,7 +13,7 @@ public class MergeSort {
         int LENGTH = length == null ? 10000000 : Integer.parseInt(length);
         System.out.println(LENGTH);
         int SHOW_LENGTH = 10;
-        int RUNS = 16;
+        int RUNS = 33;
         Scanner scan = new Scanner(System.in);
         System.out.println("Show or execute 1/0? ");
         int num = scan.nextInt();
