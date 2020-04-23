@@ -1,0 +1,2 @@
+1. javac MergeSort.java TTest.java  ThreadLauncher.java
+2. java MergeSort.java |ARRAY_SIZE| |CORES|

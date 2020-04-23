@@ -12,16 +12,16 @@ public class MergeSort {
         String length = args.length != 0 ? args[0] : null;
         int LENGTH = length == null ? 1000 : Integer.parseInt(length);
         System.out.println(LENGTH);
-        int SHOW_LENGTH = 10;
-        int RUNS = 10;
+        String cores = args.length != 0 ? args[1] : null;
+        int CORES = cores == null ? 8 : Integer.parseInt(cores);
         Scanner scan = new Scanner(System.in);
         System.out.println("Show or execute 1/0? ");
         int num = scan.nextInt();
         if (num == 1) {
             MODE = "SHOW";
-            int[] numbers = createRandomArray(SHOW_LENGTH);
+            int[] numbers = createRandomArray(LENGTH);
             long start = System.currentTimeMillis();
-            threadedMergeSort(numbers, 8);
+            threadedMergeSort(numbers, CORES);
             long end = System.currentTimeMillis();
 
             if (! sorted(numbers)) {
@@ -29,17 +29,15 @@ public class MergeSort {
             } else {
                 print(numbers);
             }
-
             long difference = end - start;
-            System.out.println("|LENGTH: " + SHOW_LENGTH +
+            System.out.println("|LENGTH: " + LENGTH +
                     "| TIME: " + difference + "|");
         } else {
             MODE = "EXECUTE";
-            for (int i = 1; i <= RUNS; i++) {
                 int[] numbers = createRandomArray(LENGTH);
 
                 long start = System.currentTimeMillis();
-                threadedMergeSort(numbers, 8);
+                threadedMergeSort(numbers, CORES);
                 long end = System.currentTimeMillis();
 
                 if (!sorted(numbers)) {
@@ -47,17 +45,17 @@ public class MergeSort {
                 }
                 long difference = end - start;
                 System.out.println("|LENGTH: " + LENGTH +
-                        "| CORES: " + i +
+                        "| CORES: " + CORES +
                         "| TIME: " + difference + "|");
-                LENGTH = LENGTH * 10;
-            }
         }
     }
 
     private static void print(int[] numbers) {
+        String array = "";
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+            array = array + " " + numbers[i];
         }
+        System.out.println(array);
     }
 
     public static void threadedMergeSort(int[] numbers, int cores) {
@@ -78,11 +76,6 @@ public class MergeSort {
             } catch (InterruptedException ie) {
 
             }
-            if (MODE.equalsIgnoreCase("SHOW")) {
-                System.out.println("Merging: ");
-                print(left);
-                print(right);
-            }
             merge(left, right, numbers);
         }
     }
@@ -94,16 +87,17 @@ public class MergeSort {
 
             mergeSort(left);
             mergeSort(right);
-            if (MODE.equalsIgnoreCase("SHOW")) {
-                System.out.println("Merging: ");
-                print(left);
-                print(right);
-            }
+
             merge(left, right, numbers);
         }
     }
 
     public static void merge(int[] left, int[] right, int[] numbers) {
+        if (MODE.equalsIgnoreCase("SHOW")) {
+            System.out.println("Merging mergeSort(int[] numbers): ");
+            print(left);
+            print(right);
+        }
         int index1 = 0;
         int index2 = 0;
         for (int i = 0; i < numbers.length; i++) {
