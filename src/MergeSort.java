@@ -39,7 +39,7 @@ public class MergeSort {
                 int[] numbers = createRandomArray(LENGTH);
 
                 long start = System.currentTimeMillis();
-                threadedMergeSort(numbers, i);
+                threadedMergeSort(numbers, 8);
                 long end = System.currentTimeMillis();
 
                 if (!sorted(numbers)) {
