@@ -94,7 +94,7 @@ public class MergeSort {
 
     public static void merge(int[] left, int[] right, int[] numbers) {
         if (MODE.equalsIgnoreCase("SHOW")) {
-            System.out.println("Merging mergeSort(int[] numbers): ");
+            System.out.println("Merging: ");
             print(left);
             print(right);
         }
@@ -123,7 +123,7 @@ public class MergeSort {
     public static int[] createRandomArray(int length) {
         int[] numbers = new int[length];
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = RAND.nextInt(1000000);
+            numbers[i] = RAND.nextInt(10000);
         }
         return numbers;
     }
