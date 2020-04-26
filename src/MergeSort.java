@@ -35,9 +35,15 @@ public class MergeSort {
                     "| TIME: " + difference + "|");
         } else {
             MODE = "EXECUTE";
-            numbers = createRandomArray(10000000);
-            maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
-            for (int i = 0; i < 12; i++) {
+
+            for (int k = 0; k < 3; k++) {
+                if (k == 0) LENGTH = 100000;
+                if (k == 1) LENGTH = 1000000;
+                if (k == 2) LENGTH = 10000000;
+                numbers = createRandomArray(LENGTH);
+                maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
+
+            for (int i = 1; i < 10; i++) {
                 long start = System.currentTimeMillis();
                 threadedMergeSort(numbers, i, 0, numbers.length - 1, maxValue);
                 long end = System.currentTimeMillis();
@@ -47,10 +53,10 @@ public class MergeSort {
                 }
                 long difference = end - start;
                 System.out.println("|LENGTH: " + LENGTH +
-                        "| CORES: " + (i+1) +
+                        "| CORES: " + (i) +
                         "| TIME: " + difference + "|");
             }
-
+            }
         }
     }
 
