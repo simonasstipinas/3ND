@@ -37,10 +37,10 @@ public class MergeSort {
             MODE = "EXECUTE";
 int bound = 0;
             for (int k = 0; k < 3; k++) {
-                if (k == 0) bound = 100;
-                if (k == 1) bound = 1000;
-                if (k == 2) bound = 10000;
-                numbers = createRandomArray(LENGTH,bound);
+                if (k == 0) LENGTH = 1000000;
+                if (k == 1) LENGTH = 10000000;
+                if (k == 2) LENGTH = 100000000;
+                numbers = createRandomArray(LENGTH, 10000);
                 maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
 
             for (int i = 0; i < 10; i++) {
