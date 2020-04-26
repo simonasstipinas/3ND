@@ -19,6 +19,8 @@ public class MergeSort {
         int num = scan.nextInt();
         int[] numbers = createRandomArray(LENGTH);
         int maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
+        int[] testt = createRandomArray(LENGTH);
+        int testtt = Arrays.stream(numbers).max().getAsInt() + 1;
         if (num == 1) {
             MODE = "SHOW";
             long start = System.currentTimeMillis();
@@ -35,8 +37,8 @@ public class MergeSort {
                     "| TIME: " + difference + "|");
         } else {
             MODE = "EXECUTE";
-            numbers = createRandomArray(10000000);
-            maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
+            numbers = testt.clone();
+            maxValue = testtt;
             for (int i = 0; i < 12; i++) {
                 long start = System.currentTimeMillis();
                 threadedMergeSort(numbers, i, 0, numbers.length - 1, maxValue);
