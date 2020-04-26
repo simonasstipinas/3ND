@@ -10,14 +10,14 @@ public class MergeSort {
 
     public static void main(String[] args) throws Throwable {
         String length = args.length != 0 ? args[0] : null;
-        int LENGTH = length == null ? 10000000 : Integer.parseInt(length);
+        int LENGTH = length == null ? 1000000 : Integer.parseInt(length);
         System.out.println(LENGTH);
         String cores = args.length != 0 ? args[1] : null;
         int CORES = cores == null ? 8 : Integer.parseInt(cores);
         Scanner scan = new Scanner(System.in);
         System.out.println("Show or execute 1/0? ");
         int num = scan.nextInt();
-        int[] numbers = createRandomArray(LENGTH, 10);
+        int[] numbers = createRandomArray(LENGTH);
         int maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
         if (num == 1) {
             MODE = "SHOW";
@@ -35,28 +35,17 @@ public class MergeSort {
                     "| TIME: " + difference + "|");
         } else {
             MODE = "EXECUTE";
-int bound = 0;
-            for (int k = 0; k < 3; k++) {
-                if (k == 0) LENGTH = 1000000;
-                if (k == 1) LENGTH = 5000000;
-                if (k == 2) LENGTH = 10000000;
-                numbers = createRandomArray(LENGTH, 10000);
-                maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
+            long start = System.currentTimeMillis();
+            threadedMergeSort(numbers, CORES, 0, numbers.length - 1, maxValue);
+            long end = System.currentTimeMillis();
 
-            for (int i = 0; i < 10; i++) {
-                long start = System.currentTimeMillis();
-                threadedMergeSort(numbers, i, 0, numbers.length - 1, maxValue);
-                long end = System.currentTimeMillis();
-
-                if (!sorted(numbers)) {
-                    throw new RuntimeException("Somethings Wrong");
-                }
-                long difference = end - start;
-                System.out.println("|LENGTH: " + LENGTH +
-                        "| CORES: " + (i) +
-                        "| TIME: " + difference + "|" + "BOUND |" + bound + "|");
+            if (! sorted(numbers)) {
+                throw new RuntimeException("Somethings Wrong");
             }
-            }
+            long difference = end - start;
+            System.out.println("|LENGTH: " + LENGTH +
+                    "| CORES: " + CORES +
+                    "| TIME: " + difference + "|");
         }
     }
 
@@ -149,10 +138,10 @@ int bound = 0;
         return true;
     }
 
-    public static int[] createRandomArray(int length, int bound) {
+    public static int[] createRandomArray(int length) {
         int[] numbers = new int[length];
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = RAND.nextInt(bound);
+            numbers[i] = RAND.nextInt(10000);
         }
         return numbers;
     }
