@@ -10,14 +10,14 @@ public class MergeSort {
 
     public static void main(String[] args) throws Throwable {
         String length = args.length != 0 ? args[0] : null;
-        int LENGTH = length == null ? 1000 : Integer.parseInt(length);
+        int LENGTH = length == null ? 10000000 : Integer.parseInt(length);
         System.out.println(LENGTH);
         String cores = args.length != 0 ? args[1] : null;
         int CORES = cores == null ? 8 : Integer.parseInt(cores);
         Scanner scan = new Scanner(System.in);
         System.out.println("Show or execute 1/0? ");
         int num = scan.nextInt();
-        int[] numbers = createRandomArray(LENGTH);
+        int[] numbers = createRandomArray(LENGTH, 10);
         int maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
         if (num == 1) {
             MODE = "SHOW";
@@ -35,15 +35,16 @@ public class MergeSort {
                     "| TIME: " + difference + "|");
         } else {
             MODE = "EXECUTE";
-
+int bound = 0;
             for (int k = 0; k < 3; k++) {
-                if (k == 0) LENGTH = 100000;
-                if (k == 1) LENGTH = 1000000;
-                if (k == 2) LENGTH = 10000000;
-                numbers = createRandomArray(LENGTH);
+                if (k == 0) bound = 100;
+                if (k == 1) bound = 1000;
+                if (k == 2) bound = 10000;
+                numbers = createRandomArray(LENGTH,bound);
                 maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
 
-            for (int i = 0; i < 10; i++) {
+//            for (int i = 0; i < 10; i++) {
+                int i=1;
                 long start = System.currentTimeMillis();
                 threadedMergeSort(numbers, i, 0, numbers.length - 1, maxValue);
                 long end = System.currentTimeMillis();
@@ -55,7 +56,73 @@ public class MergeSort {
                 System.out.println("|LENGTH: " + LENGTH +
                         "| CORES: " + (i) +
                         "| TIME: " + difference + "|");
+//            }
             }
+            for (int k = 0; k < 3; k++) {
+                if (k == 0) bound = 100;
+                if (k == 1) bound = 1000;
+                if (k == 2) bound = 10000;
+                numbers = createRandomArray(LENGTH,bound);
+                maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
+
+//            for (int i = 0; i < 10; i++) {
+                int i=2;
+                long start = System.currentTimeMillis();
+                threadedMergeSort(numbers, i, 0, numbers.length - 1, maxValue);
+                long end = System.currentTimeMillis();
+
+                if (!sorted(numbers)) {
+                    throw new RuntimeException("Somethings Wrong");
+                }
+                long difference = end - start;
+                System.out.println("|LENGTH: " + LENGTH +
+                        "| CORES: " + (i) +
+                        "| TIME: " + difference + "|");
+//            }
+            }
+            for (int k = 0; k < 3; k++) {
+                if (k == 0) bound = 100;
+                if (k == 1) bound = 1000;
+                if (k == 2) bound = 10000;
+                numbers = createRandomArray(LENGTH,bound);
+                maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
+
+//            for (int i = 0; i < 10; i++) {
+                int i=4;
+                long start = System.currentTimeMillis();
+                threadedMergeSort(numbers, i, 0, numbers.length - 1, maxValue);
+                long end = System.currentTimeMillis();
+
+                if (!sorted(numbers)) {
+                    throw new RuntimeException("Somethings Wrong");
+                }
+                long difference = end - start;
+                System.out.println("|LENGTH: " + LENGTH +
+                        "| CORES: " + (i) +
+                        "| TIME: " + difference + "|");
+//            }
+            }
+            for (int k = 0; k < 3; k++) {
+                if (k == 0) bound = 100;
+                if (k == 1) bound = 1000;
+                if (k == 2) bound = 10000;
+                numbers = createRandomArray(LENGTH,bound);
+                maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
+
+//            for (int i = 0; i < 10; i++) {
+                int i=9;
+                long start = System.currentTimeMillis();
+                threadedMergeSort(numbers, i, 0, numbers.length - 1, maxValue);
+                long end = System.currentTimeMillis();
+
+                if (!sorted(numbers)) {
+                    throw new RuntimeException("Somethings Wrong");
+                }
+                long difference = end - start;
+                System.out.println("|LENGTH: " + LENGTH +
+                        "| CORES: " + (i) +
+                        "| TIME: " + difference + "|");
+//            }
             }
         }
     }
@@ -149,10 +216,10 @@ public class MergeSort {
         return true;
     }
 
-    public static int[] createRandomArray(int length) {
+    public static int[] createRandomArray(int length, int bound) {
         int[] numbers = new int[length];
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = RAND.nextInt(10000);
+            numbers[i] = RAND.nextInt(bound);
         }
         return numbers;
     }
