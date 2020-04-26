@@ -17,97 +17,115 @@ public class MergeSort {
         Scanner scan = new Scanner(System.in);
         System.out.println("Show or execute 1/0? ");
         int num = scan.nextInt();
+        int[] numbers = createRandomArray(LENGTH);
+        int maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
         if (num == 1) {
             MODE = "SHOW";
-            int[] numbers = createRandomArray(LENGTH);
             long start = System.currentTimeMillis();
-            threadedMergeSort(numbers, CORES);
+            threadedMergeSort(numbers, CORES, 0, numbers.length - 1, maxValue);
             long end = System.currentTimeMillis();
 
             if (! sorted(numbers)) {
                 throw new RuntimeException("Somethings Wong");
             } else {
-                print(numbers);
+                print(numbers, 0, numbers.length);
             }
             long difference = end - start;
             System.out.println("|LENGTH: " + LENGTH +
                     "| TIME: " + difference + "|");
         } else {
             MODE = "EXECUTE";
-                int[] numbers = createRandomArray(LENGTH);
+            long start = System.currentTimeMillis();
+            threadedMergeSort(numbers, CORES, 0, numbers.length - 1, maxValue);
+            long end = System.currentTimeMillis();
 
-                long start = System.currentTimeMillis();
-                threadedMergeSort(numbers, CORES);
-                long end = System.currentTimeMillis();
-
-                if (!sorted(numbers)) {
-                    throw new RuntimeException("Somethings Wrong");
-                }
-                long difference = end - start;
-                System.out.println("|LENGTH: " + LENGTH +
-                        "| CORES: " + CORES +
-                        "| TIME: " + difference + "|");
+            if (!sorted(numbers)) {
+                throw new RuntimeException("Somethings Wrong");
+            }
+            long difference = end - start;
+            System.out.println("|LENGTH: " + LENGTH +
+                    "| CORES: " + CORES +
+                    "| TIME: " + difference + "|");
         }
     }
 
-    private static void print(int[] numbers) {
+    private static void print(int[] numbers, int from, int to) {
         String array = "";
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = from; i < to; i++) {
             array = array + " " + numbers[i];
         }
         System.out.println(array);
     }
 
-    public static void threadedMergeSort(int[] numbers, int cores) {
+    public static void threadedMergeSort(int[] numbers, int cores, int from, int to, int maxValue) {
         if (cores <= 1) {
-            mergeSort(numbers);
-        } else if (numbers.length >= 2) {
-            int[] left = Arrays.copyOfRange(numbers, 0, numbers.length / 2);
-            int[] right = Arrays.copyOfRange(numbers, numbers.length / 2, numbers.length);
-
-            Thread leftSide = new Thread(new ThreadLauncher(left, cores / 2));
-            Thread rightSide = new Thread(new ThreadLauncher(right, cores / 2));
+            mergeSort(numbers, from, to, maxValue);
+        } else if (from < to) {
+            int middle = (from + to) / 2;
+            Thread leftSide = new Thread(new ThreadLauncher(numbers, cores / 2, from, middle, maxValue));
+            Thread rightSide = new Thread(new ThreadLauncher(numbers, cores / 2, middle + 1, to, maxValue));
             leftSide.start();
             rightSide.start();
-
             try {
                 leftSide.join();
                 rightSide.join();
             } catch (InterruptedException ie) {
 
             }
-            merge(left, right, numbers);
+            merge(middle, from, to, numbers, maxValue);
         }
     }
 
-    public static void mergeSort(int[] numbers) {
-        if (numbers.length >= 2) {
-            int[] left = Arrays.copyOfRange(numbers, 0, numbers.length / 2);
-            int[] right = Arrays.copyOfRange(numbers, numbers.length / 2, numbers.length);
+    public static void mergeSort(int[] numbers, int from, int to, int maxValue) {
+        if (from < to) {
+            int middle = (from + to) / 2;
+            mergeSort(numbers, from, middle, maxValue);
+            mergeSort(numbers, middle + 1, to, maxValue);
 
-            mergeSort(left);
-            mergeSort(right);
-
-            merge(left, right, numbers);
+            merge(middle, from, to, numbers, maxValue);
         }
     }
 
-    public static void merge(int[] left, int[] right, int[] numbers) {
+    public static void merge(int middle, int from, int to, int[] numbers, int maxValue) {
         if (MODE.equalsIgnoreCase("SHOW")) {
             System.out.println("Merging: ");
-            print(left);
-            print(right);
+            print(numbers, from, middle);
+            print(numbers, middle, to);
         }
-        int index1 = 0;
-        int index2 = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            if (index2 >= right.length || (index1 < left.length && left[index1] < right[index2])) {
-                numbers[i] = left[index1];
-                index1++;
+
+        int i = from;
+        int j = middle + 1;
+        int k = from;
+        while (i <= middle && j <= to) {
+            if (numbers[i] % maxValue <=
+                    numbers[j] % maxValue) {
+                numbers[k] = numbers[k] + (numbers[i]
+                        % maxValue) * maxValue;
+                k++;
+                i++;
             } else {
-                numbers[i] = right[index2];
-                index2++;
+                numbers[k] = numbers[k] +
+                        (numbers[j] % maxValue)
+                                * maxValue;
+                k++;
+                j++;
             }
+        }
+        while (i <= middle) {
+            numbers[k] = numbers[k] + (numbers[i]
+                    % maxValue) * maxValue;
+            k++;
+            i++;
+        }
+        while (j <= to) {
+            numbers[k] = numbers[k] + (numbers[j]
+                    % maxValue) * maxValue;
+            k++;
+            j++;
+        }
+
+        for (i = from; i <= to; i++) {
+            numbers[i] = numbers[i] / maxValue;
         }
     }
 
