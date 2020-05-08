@@ -10,7 +10,7 @@ public class MergeSort {
 
     public static void main(String[] args) throws Throwable {
         String length = args.length != 0 ? args[0] : null;
-        int LENGTH = length == null ? 1000000 : Integer.parseInt(length);
+        int LENGTH = length == null ? 10000000 : Integer.parseInt(length);
         System.out.println(LENGTH);
         String cores = args.length != 0 ? args[1] : null;
         int CORES = cores == null ? 8 : Integer.parseInt(cores);
@@ -18,11 +18,10 @@ public class MergeSort {
         System.out.println("Show or execute 1/0? ");
         int num = scan.nextInt();
         int[] numbers = createRandomArray(LENGTH);
-        int maxValue = Arrays.stream(numbers).max().getAsInt() + 1;
         if (num == 1) {
             MODE = "SHOW";
             long start = System.currentTimeMillis();
-            threadedMergeSort(numbers, CORES, 0, numbers.length - 1, maxValue);
+            threadedMergeSort(numbers, CORES, 0, numbers.length - 1);
             long end = System.currentTimeMillis();
 
             if (! sorted(numbers)) {
@@ -36,7 +35,13 @@ public class MergeSort {
         } else {
             MODE = "EXECUTE";
             long start = System.currentTimeMillis();
-            threadedMergeSort(numbers, CORES, 0, numbers.length - 1, maxValue);
+            threadedMergeSort(numbers, 1, 0, numbers.length - 1);
+            long end = System.currentTimeMillis();
+            for (int i = 0; i < 9; i++) {
+
+            }
+            long start = System.currentTimeMillis();
+            threadedMergeSort(numbers, CORES, 0, numbers.length - 1);
             long end = System.currentTimeMillis();
 
             if (! sorted(numbers)) {
@@ -57,13 +62,13 @@ public class MergeSort {
         System.out.println(array);
     }
 
-    public static void threadedMergeSort(int[] numbers, int cores, int from, int to, int maxValue) {
+    public static void threadedMergeSort(int[] numbers, int cores, int from, int to) {
         if (cores <= 1) {
-            mergeSort(numbers, from, to, maxValue);
+            mergeSort(numbers, from, to);
         } else if (from < to) {
             int middle = (from + to) / 2;
-            Thread leftSide = new Thread(new ThreadLauncher(numbers, cores / 2, from, middle, maxValue));
-            Thread rightSide = new Thread(new ThreadLauncher(numbers, cores / 2, middle + 1, to, maxValue));
+            Thread leftSide = new Thread(new ThreadLauncher(numbers, cores / 2, from, middle));
+            Thread rightSide = new Thread(new ThreadLauncher(numbers, cores / 2, middle + 1, to));
             leftSide.start();
             rightSide.start();
             try {
@@ -72,60 +77,63 @@ public class MergeSort {
             } catch (InterruptedException ie) {
 
             }
-            merge(middle, from, to, numbers, maxValue);
+            merge(middle, from, to, numbers);
         }
     }
 
-    public static void mergeSort(int[] numbers, int from, int to, int maxValue) {
+    public static void mergeSort(int[] numbers, int from, int to) {
         if (from < to) {
             int middle = (from + to) / 2;
-            mergeSort(numbers, from, middle, maxValue);
-            mergeSort(numbers, middle + 1, to, maxValue);
+            mergeSort(numbers, from, middle);
+            mergeSort(numbers, middle + 1, to);
 
-            merge(middle, from, to, numbers, maxValue);
+            merge(middle, from, to, numbers);
         }
     }
 
-    public static void merge(int middle, int from, int to, int[] numbers, int maxValue) {
+    public static void merge(int middle, int from, int to, int[] numbers) {
         if (MODE.equalsIgnoreCase("SHOW")) {
             System.out.println("Merging: ");
             print(numbers, from, middle);
             print(numbers, middle, to);
         }
 
-        int i = from;
-        int j = middle + 1;
+        int n1 = middle - from + 1;
+        int n2 = to - middle;
+
+        int left[] = new int[n1];
+        int right[] = new int[n2];
+
+        for (int i = 0; i < n1; ++ i)
+            left[i] = numbers[from + i];
+        for (int j = 0; j < n2; ++ j)
+            right[j] = numbers[middle + 1 + j];
+
+
+        int i = 0, j = 0;
+
         int k = from;
-        while (i <= middle && j <= to) {
-            if (numbers[i] % maxValue <=
-                    numbers[j] % maxValue) {
-                numbers[k] = numbers[k] + (numbers[i]
-                        % maxValue) * maxValue;
-                k++;
+        while (i < n1 && j < n2) {
+            if (left[i] <= right[j]) {
+                numbers[k] = left[i];
                 i++;
             } else {
-                numbers[k] = numbers[k] +
-                        (numbers[j] % maxValue)
-                                * maxValue;
-                k++;
+                numbers[k] = right[j];
                 j++;
             }
-        }
-        while (i <= middle) {
-            numbers[k] = numbers[k] + (numbers[i]
-                    % maxValue) * maxValue;
             k++;
-            i++;
-        }
-        while (j <= to) {
-            numbers[k] = numbers[k] + (numbers[j]
-                    % maxValue) * maxValue;
-            k++;
-            j++;
         }
 
-        for (i = from; i <= to; i++) {
-            numbers[i] = numbers[i] / maxValue;
+        while (i < n1) {
+            numbers[k] = left[i];
+            i++;
+            k++;
+        }
+
+        while (j < n2) {
+            numbers[k] = right[j];
+            j++;
+            k++;
         }
     }
 
@@ -141,7 +149,7 @@ public class MergeSort {
     public static int[] createRandomArray(int length) {
         int[] numbers = new int[length];
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = RAND.nextInt(10000);
+            numbers[i] = RAND.nextInt(1000);
         }
         return numbers;
     }

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e45e86f-b6e6-49f4-94ca-e770848a7adb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/merge_sort/Main.class" beforeDir="false" />
+    <list default="true" id="8e45e86f-b6e6-49f4-94ca-e770848a7adb" name="Default Changelist" comment="LL.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/merge_sort/MergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/merge_sort/MergeSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/merge_sort/ThreadLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/merge_sort/ThreadLauncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/merge_sort/keygen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/merge_sort/keygen.pub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/MergeSort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThreadLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreadLauncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThreadLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreadLauncher.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +24,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ThreadLauncher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <folding>
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="-51">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,61 +50,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="1104" column="19" selection-start-line="1104" selection-start-column="19" selection-end-line="1104" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/programa.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="51">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MergeSort.class">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2088">
-              <caret line="116" column="1" selection-start-line="116" selection-start-column="1" selection-end-line="116" selection-end-column="1" />
-              <folding>
-                <element signature="docComment;class#TTest#0" expanded="true" />
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#326#327#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keygen.pub">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="378" selection-start-column="7" selection-end-column="378" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keygen">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Random.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="134" column="11" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ThreadLauncher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="2329">
+              <caret line="331" column="4" selection-start-line="331" selection-start-column="4" selection-end-line="331" selection-end-column="4" />
+              <folding>
+                <element signature="e#12023#14878#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,9 +90,16 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mergeSort</find>
       <find>shuffle</find>
       <find>merge</find>
+      <find>Merging</find>
+      <find>System.out</find>
+      <find>mergin</find>
+      <find>mergeSort</find>
+      <find>copyOfRange</find>
+      <find>left</find>
+      <find>numbers</find>
+      <find>middle</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -120,9 +116,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/Sorter.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/ThreadLauncher.java" />
         <option value="$PROJECT_DIR$/src/programa.sh" />
         <option value="$PROJECT_DIR$/src/TTest.java" />
+        <option value="$PROJECT_DIR$/src/Explanation.txt" />
+        <option value="$PROJECT_DIR$/src/ThreadLauncher.java" />
         <option value="$PROJECT_DIR$/src/MergeSort.java" />
       </list>
     </option>
@@ -135,7 +132,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="y" value="25" />
-    <option name="width" value="1345" />
+    <option name="width" value="960" />
     <option name="height" value="1008" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -144,6 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -161,7 +159,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,6 +167,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -224,17 +222,108 @@
       <workItem from="1587457393168" duration="11992000" />
       <workItem from="1587564408488" duration="626000" />
       <workItem from="1587573142588" duration="2255000" />
-      <workItem from="1587619162159" duration="3171000" />
+      <workItem from="1587619162159" duration="6041000" />
+      <workItem from="1587673183677" duration="27201000" />
+      <workItem from="1587900822388" duration="2902000" />
+      <workItem from="1587967264493" duration="12000" />
+      <workItem from="1588783030350" duration="7716000" />
+      <workItem from="1588837730797" duration="599000" />
+      <workItem from="1588913063107" duration="4663000" />
     </task>
+    <task id="LOCAL-00001" summary="ssssssss">
+      <created>1587708843534</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587708843534</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Uses same array to save memory.">
+      <created>1587886821224</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587886821224</updated>
+    </task>
+    <task id="LOCAL-00003" summary="LL.">
+      <created>1587894431036</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587894431036</updated>
+    </task>
+    <task id="LOCAL-00004" summary="LL.">
+      <created>1587894902104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587894902104</updated>
+    </task>
+    <task id="LOCAL-00005" summary="LL.">
+      <created>1587895257331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587895257331</updated>
+    </task>
+    <task id="LOCAL-00006" summary="LL.">
+      <created>1587897827211</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587897827211</updated>
+    </task>
+    <task id="LOCAL-00007" summary="LL.">
+      <created>1587898106889</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587898106889</updated>
+    </task>
+    <task id="LOCAL-00008" summary="LL.">
+      <created>1587899317109</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587899317109</updated>
+    </task>
+    <task id="LOCAL-00009" summary="LL.">
+      <created>1587901784954</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587901784954</updated>
+    </task>
+    <task id="LOCAL-00010" summary="LL.">
+      <created>1587902766492</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587902766493</updated>
+    </task>
+    <task id="LOCAL-00011" summary="LL.">
+      <created>1587902871196</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587902871196</updated>
+    </task>
+    <task id="LOCAL-00012" summary="FINAL.">
+      <created>1587903994577</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587903994577</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20951000" />
+    <option name="totallyTimeSpent" value="66914000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1345" height="1008" extended-state="4" />
+    <frame x="0" y="25" width="960" height="1008" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1466253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.042035397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -244,22 +333,22 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.330413" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8097345" weight="0.40050063" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.57457083" weight="0.06393245" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34016886" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.23340708" side_tool="true" visible="true" weight="0.3266583" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49034336" weight="0.26417372" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="ConsoleMavenPlugin" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" sideWeight="0.7665929" visible="true" weight="0.3266583" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49892703" weight="0.3293124" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.48298573" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.48229614" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Maven-2 Build" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
@@ -272,29 +361,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ssssssss" />
+    <MESSAGE value="Uses same array to save memory." />
+    <MESSAGE value="LL." />
+    <MESSAGE value="FINAL." />
+    <option name="LAST_COMMIT_MESSAGE" value="FINAL." />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/keygen.pub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="378" selection-start-column="7" selection-end-column="378" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keygen">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="134" column="11" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/keygen.pub" />
+    <entry file="file://$PROJECT_DIR$/keygen" />
     <entry file="file://$PROJECT_DIR$/src/TTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2088">
-          <caret line="116" column="1" selection-start-line="116" selection-start-column="1" selection-end-line="116" selection-end-column="1" />
+        <state relative-caret-position="702">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding>
             <element signature="docComment;class#TTest#0" expanded="true" />
             <element signature="e#298#299#0" expanded="true" />
@@ -303,27 +384,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ThreadLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MergeSort.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Explanation.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="3587" column="24" selection-start-line="3587" selection-start-column="24" selection-end-line="3587" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="331" column="4" selection-start-line="331" selection-start-column="4" selection-end-line="331" selection-end-column="4" />
+          <folding>
+            <element signature="e#12023#14878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/programa.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="1104" column="19" selection-start-line="1104" selection-start-column="19" selection-end-line="1104" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ThreadLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="-51">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
