@@ -10,7 +10,7 @@ public class MergeSort {
 
     public static void main(String[] args) throws Throwable {
         String length = args.length != 0 ? args[0] : null;
-        int LENGTH = length == null ? 10000000 : Integer.parseInt(length);
+        int LENGTH = length == null ? 100000000 : Integer.parseInt(length);
         System.out.println(LENGTH);
         String cores = args.length != 0 ? args[1] : null;
         int CORES = cores == null ? 8 : Integer.parseInt(cores);
@@ -36,7 +36,7 @@ public class MergeSort {
             MODE = "EXECUTE";
             for (int i = 0; i < 9; i++) {
                 long start = System.currentTimeMillis();
-                threadedMergeSort(numbers, CORES, 0, numbers.length - 1);
+                threadedMergeSort(numbers, i, 0, numbers.length - 1);
                 long end = System.currentTimeMillis();
 
                 if (! sorted(numbers)) {
@@ -44,7 +44,7 @@ public class MergeSort {
                 }
                 long difference = end - start;
                 System.out.println("|LENGTH: " + LENGTH +
-                        "| CORES: " + CORES +
+                        "| CORES: " + i +
                         "| TIME: " + difference + "|");
             }
 
