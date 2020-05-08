@@ -35,6 +35,17 @@ public class MergeSort {
         } else {
             MODE = "EXECUTE";
             for (int i = 0; i < 9; i++) {
+                for (int j = 1; j <= 3; j++) {
+                    if (j == 1){
+                        numbers = createRandomArray(100000000);
+                    }
+                    if (j == 2){
+                        numbers = createRandomArray(70000000);
+                    }
+                    if (j == 3){
+                        numbers = createRandomArray(50000000);
+                    }
+                }
                 long start = System.currentTimeMillis();
                 threadedMergeSort(numbers, i, 0, numbers.length - 1);
                 long end = System.currentTimeMillis();
