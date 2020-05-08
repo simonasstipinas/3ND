@@ -37,12 +37,15 @@ public class MergeSort {
             for (int i = 0; i < 9; i++) {
                 for (int j = 1; j <= 3; j++) {
                     if (j == 1){
+                        LENGTH = 100000000;
                         numbers = createRandomArray(100000000);
                     }
                     if (j == 2){
+                        LENGTH = 70000000;
                         numbers = createRandomArray(70000000);
                     }
                     if (j == 3){
+                        LENGTH = 50000000;
                         numbers = createRandomArray(50000000);
                     }
                 }
