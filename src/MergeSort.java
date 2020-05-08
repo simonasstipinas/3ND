@@ -48,7 +48,7 @@ public class MergeSort {
                         LENGTH = 50000000;
                         numbers = createRandomArray(50000000);
                     }
-                }
+
                 long start = System.currentTimeMillis();
                 threadedMergeSort(numbers, i, 0, numbers.length - 1);
                 long end = System.currentTimeMillis();
@@ -60,6 +60,7 @@ public class MergeSort {
                 System.out.println("|LENGTH: " + LENGTH +
                         "| CORES: " + i +
                         "| TIME: " + difference + "|");
+                }
             }
 
 

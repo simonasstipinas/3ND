@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e45e86f-b6e6-49f4-94ca-e770848a7adb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/merge_sort/MergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/merge_sort/MergeSort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MergeSort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="55" />
+            <state relative-caret-position="182">
+              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,7 +220,7 @@
       <workItem from="1587967264493" duration="12000" />
       <workItem from="1588783030350" duration="7716000" />
       <workItem from="1588837730797" duration="599000" />
-      <workItem from="1588913063107" duration="6068000" />
+      <workItem from="1588913063107" duration="6365000" />
     </task>
     <task id="LOCAL-00001" summary="ssssssss">
       <created>1587708843534</created>
@@ -329,15 +327,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588921744780</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="sssssasdsads">
+      <created>1588922956638</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1588922956638</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68319000" />
+    <option name="totallyTimeSpent" value="68616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="960" height="1008" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.042035397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -350,16 +354,16 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8097345" weight="0.40050063" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.57300884" weight="0.5531915" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.57190263" weight="0.5531915" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5132743" side_tool="true" visible="true" weight="0.31914893" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.48672566" visible="true" weight="0.31914893" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.23783186" side_tool="true" visible="true" weight="0.3266583" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.48561946" weight="0.31914893" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="ConsoleMavenPlugin" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.7643805" weight="0.3266583" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" sideWeight="0.76216817" visible="true" weight="0.3266583" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49892703" weight="0.3293124" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -385,7 +389,8 @@
     <MESSAGE value="sssdsadsa" />
     <MESSAGE value="sss" />
     <MESSAGE value="sssss" />
-    <option name="LAST_COMMIT_MESSAGE" value="sssss" />
+    <MESSAGE value="sssssasdsads" />
+    <option name="LAST_COMMIT_MESSAGE" value="sssssasdsads" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
@@ -464,8 +469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="55" />
+        <state relative-caret-position="182">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
