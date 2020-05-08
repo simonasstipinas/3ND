@@ -34,23 +34,21 @@ public class MergeSort {
                     "| TIME: " + difference + "|");
         } else {
             MODE = "EXECUTE";
-            long start = System.currentTimeMillis();
-            threadedMergeSort(numbers, 1, 0, numbers.length - 1);
-            long end = System.currentTimeMillis();
             for (int i = 0; i < 9; i++) {
+                long start = System.currentTimeMillis();
+                threadedMergeSort(numbers, CORES, 0, numbers.length - 1);
+                long end = System.currentTimeMillis();
 
+                if (! sorted(numbers)) {
+                    throw new RuntimeException("Somethings Wrong");
+                }
+                long difference = end - start;
+                System.out.println("|LENGTH: " + LENGTH +
+                        "| CORES: " + CORES +
+                        "| TIME: " + difference + "|");
             }
-            long start = System.currentTimeMillis();
-            threadedMergeSort(numbers, CORES, 0, numbers.length - 1);
-            long end = System.currentTimeMillis();
 
-            if (! sorted(numbers)) {
-                throw new RuntimeException("Somethings Wrong");
-            }
-            long difference = end - start;
-            System.out.println("|LENGTH: " + LENGTH +
-                    "| CORES: " + CORES +
-                    "| TIME: " + difference + "|");
+
         }
     }
 
